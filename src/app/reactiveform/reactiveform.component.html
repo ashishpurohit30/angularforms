@@ -1,0 +1,56 @@
+<!-- 
+<form [formGroup]="formGroup" class="form form-group" (ngSubmit)="onSubmit(formGroup)">
+    <label for="inputName" class="col-form-label">First Name</label>
+    <input type="text" formControlName="lname">
+
+    <label for="inputName" class="col-form-label">First Name</label>
+    <input type="text" id="inputName" formControlName="fname">
+
+    <label for="inputName" class="col-form-label">First Name</label>
+    <input type="text" formControlName="email">
+
+    <label for="inputName" class="col-form-label">First Name</label>
+    <input type="text" formControlName="username">
+
+    <label for="inputName" class="col-form-label">First Name</label>
+    <input type="text" formControlName="mobile">
+
+    <label for="inputName" class="col-form-label">First Name</label>
+    <input type="text" formControlName="password">
+
+</form> --> 
+<form [formGroup]="formGroup" class="form-group" (ngSubmit)="onSubmit()">
+  
+    <label >
+      First Name:
+      <input type="text" formControlName="fname">
+    </label>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lname">
+    </label>
+
+    <label>
+       Address:
+        <input type="text" formControlName="address">
+      </label>
+
+      <label>
+        Email
+        <input type="email" formControlName="email">
+      </label>
+
+      <label>
+       Mobile
+        <input type="number" formControlName="mobile">
+      </label>
+
+      <label>
+       Password
+        <input type="text" formControlName="password">
+      </label>
+
+    <button type="submit" [disabled]="!formGroup.valid">Submit</button>
+  
+  </form>
