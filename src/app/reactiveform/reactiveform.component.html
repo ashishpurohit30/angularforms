@@ -1,4 +1,4 @@
-<!-- 
+<!-- <!-- 
 <form [formGroup]="formGroup" class="form form-group" (ngSubmit)="onSubmit(formGroup)">
     <label for="inputName" class="col-form-label">First Name</label>
     <input type="text" formControlName="lname">
@@ -38,12 +38,12 @@
 
       <label>
         Email
-        <input type="email" formControlName="email">
+        <input type="text" formControlName="email">
       </label>
 
       <label>
        Mobile
-        <input type="number" formControlName="mobile">
+        <input type="text" formControlName="mobile">
       </label>
 
       <label>
@@ -51,6 +51,12 @@
         <input type="text" formControlName="password">
       </label>
 
-    <button type="submit" [disabled]="!formGroup.valid">Submit</button>
+    <button type="submit" class="btn btn-dark" [disabled]="!formGroup.valid">Submit</button>
   
+    
+        <button class="btn btn-danger submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
+
+        {{formGroup.status}}
+    
+
   </form>

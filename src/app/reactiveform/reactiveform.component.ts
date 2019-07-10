@@ -10,8 +10,8 @@ export class ReactiveformComponent implements OnInit {
 
  formGroup = new FormGroup(
    {
-     fname :new FormControl(''),
-     lname :new FormControl(''),
+     fname :new FormControl('',Validators.compose([Validators.minLength(4), Validators.maxLength(16), Validators.required])),
+     lname :new FormControl('',Validators.compose([Validators.minLength(4), Validators.maxLength(16)])),
      mobile :new FormControl(''),
      password :new FormControl(''),
      email :new FormControl(''),
@@ -22,7 +22,12 @@ export class ReactiveformComponent implements OnInit {
 
  onSubmit()
  {
-   console.log(this.formGroup.value);
+   console.log(this.formGroup);
+ }
+
+ resetForm()
+ {
+   this.formGroup.reset();
  }
 
   constructor() 

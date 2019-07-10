@@ -1,0 +1,26 @@
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948;
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442;
+  }
+
+  .bordered-invalid
+{
+    border: 2px solid #a94442;
+}
+
+.bordered-valid
+{
+    border: 2px solid #42A948;
+}
+
+.alert
+{
+  padding: .30rem 1rem;
+}
+button#reset
+{
+  margin-left: 50px;
+}
