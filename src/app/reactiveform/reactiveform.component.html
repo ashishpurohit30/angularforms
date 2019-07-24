@@ -1,62 +1,42 @@
-<!-- <!-- 
-<form [formGroup]="formGroup" class="form form-group" (ngSubmit)="onSubmit(formGroup)">
-    <label for="inputName" class="col-form-label">First Name</label>
-    <input type="text" formControlName="lname">
+<div class="container">
+  <h1>User Form</h1>
 
-    <label for="inputName" class="col-form-label">First Name</label>
-    <input type="text" id="inputName" formControlName="fname">
+  <form [formGroup] = "formGroup" (ngSubmit) = "onSubmit()">
 
-    <label for="inputName" class="col-form-label">First Name</label>
-    <input type="text" formControlName="email">
+    <div class="form-group">
+      <label for="fullname">First Name</label>
+      <input type="text" class="form-control" id="fullname" formControlName="fullname" name="fullname">
+    </div>
 
-    <label for="inputName" class="col-form-label">First Name</label>
-    <input type="text" formControlName="username">
-
-    <label for="inputName" class="col-form-label">First Name</label>
-    <input type="text" formControlName="mobile">
-
-    <label for="inputName" class="col-form-label">First Name</label>
-    <input type="text" formControlName="password">
-
-</form> --> 
-<form [formGroup]="formGroup" class="form-group" (ngSubmit)="onSubmit()">
-  
-    <label >
-      First Name:
-      <input type="text" formControlName="fname">
-    </label>
-
-    <label>
-      Last Name:
-      <input type="text" formControlName="lname">
-    </label>
-
-    <label>
-       Address:
-        <input type="text" formControlName="address">
-      </label>
-
-      <label>
-        Email
-        <input type="text" formControlName="email">
-      </label>
-
-      <label>
-       Mobile
-        <input type="text" formControlName="mobile">
-      </label>
-
-      <label>
-       Password
-        <input type="text" formControlName="password">
-      </label>
-
-    <button type="submit" class="btn btn-dark" [disabled]="!formGroup.valid">Submit</button>
-  
     
-        <button class="btn btn-danger submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
 
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input type="text" class="form-control" id="lastname" formControlName="lastname" name="lastname">
+    </div>
+    <p>
         {{formGroup.status}}
-    
+      </p>
+    <!-- <div class="form-group">
+      <label for="mobile">Mobile</label>
+      <input type="text" class="form-control" id="mobile" formControlName="mobile" name="mobile">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="text" class="form-control" id="password" formControlName="password" name="password">
+    </div>
+    <div class="form-group">
+      <label for="email">E-Mail</label>
+      <input type="text" class="form-control" id="email" formControlName="email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address" formControlName="address" name="address">
+    </div> -->
 
+    <button type="submit" [disabled]="!formGroup.valid" class="btn btn-success">Submit</button>
+
+    <button id="reset" #reset type="submit" class="btn btn-danger" (click)="resetForm()">Reset</button>
+    
   </form>
+</div>
