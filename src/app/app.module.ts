@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateformComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    LifecyclehooksComponent
   ],
   imports: [
     BrowserModule,
